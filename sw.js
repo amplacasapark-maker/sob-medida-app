@@ -1,5 +1,5 @@
 // Sob Medida · Ampla — funciona sem internet (guarda o app no aparelho)
-const CACHE='sob-medida-v21';
+const CACHE='sob-medida-v22';
 const ARQS=['./','index.html','manifest.webmanifest','icon-192.png','icon-512.png'];
 const CDN='https://cdn.jsdelivr.net/npm/@supabase/supabase-js@2.45.4/dist/umd/supabase.min.js';
 self.addEventListener('install',e=>{e.waitUntil(caches.open(CACHE).then(c=>c.addAll(ARQS).then(()=>c.add(CDN).catch(()=>{}))).then(()=>self.skipWaiting()))});
